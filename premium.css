@@ -1206,7 +1206,8 @@ p {
   color: var(--bf-muted);
 }
 
-@media (max-width: 980px) {
+/* O menu completo precisa de mais largura desde a inclusao de Diagnostico. */
+@media (max-width: 1180px) {
   .nav-toggle {
     display: inline-grid;
     place-items: center;
@@ -1384,4 +1385,29 @@ p {
 
 .nav .diagnostic-link::after {
   background: #ff4b26;
+}
+
+.diagnostic-page {
+  min-height: calc(100vh - 84px);
+  background: var(--bf-soft);
+}
+
+.diagnostic-frame {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 84px);
+  min-height: 720px;
+  border: 0;
+  background: #fff;
+}
+
+@media (max-width: 680px) {
+  .diagnostic-page {
+    min-height: calc(100vh - 72px);
+  }
+
+  .diagnostic-frame {
+    height: calc(100vh - 72px);
+    min-height: 640px;
+  }
 }

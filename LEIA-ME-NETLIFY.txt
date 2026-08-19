@@ -6,6 +6,6 @@ SITE BORA FAZER — PACOTE NETLIFY
 4. Arraste esta pasta completa para a área de deploy manual.
 5. Aguarde a publicação e teste o item “Diagnóstico” no menu.
 
-O diagnóstico continua hospedado separadamente nesta V1. Os links do site
-direcionam para a ferramenta publicada e preservam o funcionamento atual das
-demais páginas e do formulário de contato.
+O diagnóstico continua hospedado separadamente, mas agora aparece integrado na
+rota /diagnostico/ do site. O menu da Bora Fazer permanece visível para que o
+visitante possa retornar às demais páginas normalmente.

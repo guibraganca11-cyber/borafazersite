@@ -9,7 +9,8 @@ const form = document.querySelector("[data-form]");
 const status = document.querySelector(".form-status");
 
 menuToggle?.addEventListener("click", () => {
-  nav?.classList.toggle("open");
+  const isOpen = nav?.classList.toggle("open") ?? false;
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
 const whatsappNumber = "5521967171986";

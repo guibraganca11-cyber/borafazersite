@@ -1,0 +1,54 @@
+.logo {
+  position: relative;
+  overflow: visible;
+}
+
+.anniversary-badge {
+  position: absolute;
+  top: -8px;
+  right: -13px;
+  z-index: 2;
+  width: 25px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font: 900 10px/1 Arial, sans-serif;
+  background: linear-gradient(155deg, #ff4b26 0%, #ff7a3f 100%);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  transform: rotate(13deg);
+  filter: drop-shadow(0 5px 8px rgba(255, 75, 38, .28));
+  pointer-events: none;
+}
+
+.anniversary-badge::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #075f97;
+  transform: translateX(-50%);
+}
+
+.anniversary-badge::after {
+  content: "";
+  position: absolute;
+  inset: 13px 4px auto 4px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .72);
+  transform: rotate(-8deg);
+}
+
+@media (max-width: 700px) {
+  .anniversary-badge {
+    top: -7px;
+    right: -10px;
+    width: 22px;
+    height: 28px;
+    font-size: 9px;
+  }
+}

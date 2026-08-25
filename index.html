@@ -3,12 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Clareza para operar. Confiança para crescer. A Bora Fazer organiza operações físicas e digitais com processos, tecnologia e execução.">
-  <title>Bora Fazer | Clareza para operar. Confiança para crescer.</title>
+  <meta name="description" content="A Bora Fazer estrutura e executa operações de marketplace, e-commerce, press kits e projetos especiais, conectando processos, tecnologia, logística e indicadores.">
+  <title>Bora Fazer | Marketplace, Operações Digitais e Projetos Especiais</title>
   <link rel="stylesheet" href="styles.css?v=5">
   <link rel="stylesheet" href="story.css?v=1">
   <link rel="stylesheet" href="premium.css?v=5">
-</head>
+<style>
+.service-grid.two-services{grid-template-columns:repeat(2,minmax(0,1fr))}
+.timeline.five-steps{grid-template-columns:repeat(5,minmax(0,1fr))}
+.proof-section,.ecosystem-section{background:#eef8fc}
+.section-intro{max-width:720px;color:#607585;font-size:17px}
+.experience-grid,.proof-grid,.start-grid,.assurance-grid,.visibility-grid{display:grid;gap:18px;margin-top:42px}
+.experience-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.proof-grid,.start-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.assurance-grid,.visibility-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.experience-card,.proof-grid article,.start-grid article,.assurance-grid article,.visibility-grid div{background:#fff;border:1px solid #d7e8f1;border-radius:16px;padding:28px}
+.experience-card h3,.proof-grid h3,.start-grid h3{font-size:23px;line-height:1.18;margin-bottom:14px}
+.experience-card p,.proof-grid p,.start-grid p,.assurance-grid p,.visibility-grid span{font-size:14px;color:#617486;margin:0}
+.experience-card .mini-proof{margin:18px 0;grid-template-columns:repeat(2,1fr)}
+.proof-grid>article>span,.start-grid>article>span,.assumed-grid small{display:block;color:#ff4b26;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;margin-bottom:18px}
+.case-detail{border-top:1px solid #d7e8f1;padding-top:13px;margin-top:13px!important}.case-detail b{color:#075f97}
+.assurance-section{background:#062f52;color:#fff}.assurance-section .eyebrow{color:#9bd8ed}.assurance-section .section-intro,.assurance-grid p{color:#c6e1ed}.assurance-grid article{background:#ffffff0d;border-color:#ffffff35}.assurance-grid h3{font-size:15px}
+.assumed-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.assumed-grid article{min-height:235px}
+.ecosystem-layout{align-items:start}.ecosystem-groups{display:grid;gap:24px}.ecosystem-groups>div{background:#fff;border:1px solid #d7e8f1;border-radius:16px;padding:25px}.badge-list{display:flex;flex-wrap:wrap;gap:9px}.badge-list span{border:1px solid #bcdbe8;background:#f8fcfe;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:700;color:#075f97}
+.demo-note{grid-column:1/-1;background:#fff5f1;color:#82402f!important;border:1px solid #ffd5ca;border-radius:8px;padding:10px 12px;font-size:11px!important}
+.method-flow-detailed>div{height:auto!important;min-height:210px!important;align-items:flex-start!important;justify-content:flex-start!important;flex-direction:column;padding:20px!important}.method-flow-detailed p{font-size:12px;color:#617486;margin:10px 0 0}.team-placeholder{border:1px dashed #bcdbe8;border-radius:10px;padding:13px;color:#617486;font-size:12px}
+.visibility-section{background:#f4f9fc}.visibility-grid div{display:flex;flex-direction:column;gap:6px}.visibility-grid b{color:#075f97}.visibility-grid span{display:block}
+@media(max-width:900px){.timeline.five-steps,.assumed-grid,.assurance-grid,.visibility-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.proof-grid,.start-grid{grid-template-columns:1fr}}
+@media(max-width:680px){.service-grid.two-services,.timeline.five-steps,.assumed-grid,.experience-grid,.assurance-grid,.visibility-grid{grid-template-columns:1fr}.proof-grid article,.start-grid article,.experience-card{padding:22px}.method-flow-detailed>div{min-height:0!important}}
+</style></head>
 <body>
   <header class="header">
     <div class="wrap nav-wrap">
@@ -16,16 +39,7 @@
         <img src="assets/bora-fazer-logo-nav.png" alt="Bora Fazer">
       </a>
       <button class="nav-toggle" aria-label="Abrir menu">☰</button>
-      <nav class="nav" aria-label="Menu principal">
-        <a href="index.html">Home</a>
-        <a href="#o-que-fazemos">O Que Fazemos</a>
-        <a href="press-kits.html">Press Kits</a>
-        <a href="operacoes-digitais.html">Operações Digitais</a>
-        <a href="projetos-especiais.html">Projetos Especiais</a>
-        <a href="quem-somos.html">Quem Somos</a>
-        <a class="diagnostic-link" href="diagnostico/">Diagnóstico</a>
-        <a class="contact" href="#contato">Contato</a>
-      </nav>
+      <nav class="nav" aria-label="Menu principal"><a href="index.html">Home</a><a href="operacoes-digitais.html">Operações Digitais</a><a href="press-kits.html">Press Kits</a><a href="#metodo-bora">Como Trabalhamos</a><a href="quem-somos.html">Quem Somos</a><a class="diagnostic-link" href="diagnostico/">Diagnóstico</a><a class="contact" href="#contato">Contato</a></nav>
     </div>
   </header>
 
@@ -34,8 +48,8 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <p class="story-label">Clareza para operar. Confiança para crescer.</p>
-          <h1>Transformamos operações complexas em rotina organizada.</h1>
-          <p class="hero-lead">A Bora Fazer ajuda empresas a estruturar operações físicas e digitais com processos, tecnologia e execução — do press kit ao marketplace, da logística aos indicadores.</p>
+          <h1>Da venda digital à entrega física, fazemos a operação acontecer.</h1>
+          <p class="hero-lead">A Bora Fazer estrutura e executa operações de marketplace, e-commerce, press kits e projetos especiais, conectando sistemas, processos, logística e indicadores para sua empresa crescer com mais controle.</p>
           <div class="hero-actions">
             <a class="btn primary" href="diagnostico/">Fazer diagnóstico digital</a>
             <a class="btn ghost-light" href="#o-que-fazemos">Conhecer soluções</a>
@@ -70,69 +84,12 @@
       </div>
     </section>
 
-    <section class="section premium-services" id="o-que-fazemos">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">O que fazemos</p>
-          <h2>Três frentes para organizar a operação de ponta a ponta.</h2>
-        </div>
-        <div class="service-grid">
-          <a class="service-card large" href="press-kits.html">
-            <span>01</span>
-            <h3>Press Kits & Operações Especiais</h3>
-            <p>Planejamento, montagem, armazenagem, personalização, controle e expedição de projetos que precisam chegar impecáveis.</p>
-            <small>Ver operação completa ↗</small>
-          </a>
-          <a class="service-card" href="operacoes-digitais.html">
-            <span>02</span>
-            <h3>Operações Digitais & Marketplace</h3>
-            <p>Estrutura para vender online com catálogo, pedidos, estoque, integrações, logística e indicadores no mesmo fluxo.</p>
-            <small>Conhecer frente digital ↗</small>
-          </a>
-          <a class="service-card dark" href="projetos-especiais.html">
-            <span>03</span>
-            <h3>Gestão & Eficiência Operacional</h3>
-            <p>Processos, dashboards, automações e rotinas para tirar a gestão do improviso e colocar clareza na tomada de decisão.</p>
-            <small>Explorar projetos ↗</small>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section visual-story">
-      <div class="wrap visual-grid">
-        <figure>
-          <img src="assets/estoque-logistica.png" alt="Estoque organizado, conferência e preparação para expedição">
-        </figure>
-        <div>
-          <p class="eyebrow">Empresa em movimento</p>
-          <h2>A operação precisa ser bonita por fora e confiável por dentro.</h2>
-          <p>Um projeto pode começar com uma ideia criativa, um produto novo ou uma campanha especial. Mas ele só vira resultado quando existe método para receber, conferir, organizar, montar, acompanhar e entregar.</p>
-          <div class="mini-proof">
-            <div><b>1 ano</b><span>de operação</span></div>
-            <div><b>+70</b><span>projetos diferentes</span></div>
-            <div><b>+5k</b><span>produtos expedidos</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section method-section">
-      <div class="wrap">
-        <div class="section-heading narrow">
-          <p class="eyebrow">Método Bora Fazer</p>
-          <h2>Uma parceria que entra na realidade da sua operação.</h2>
-        </div>
-        <div class="timeline">
-          <div><b>01</b><h3>Entender</h3><p>Entramos na rotina real da operação para identificar fluxo, gargalos, riscos e oportunidades.</p></div>
-          <div><b>02</b><h3>Organizar</h3><p>Desenhamos processos, responsabilidades, padrões e pontos de controle.</p></div>
-          <div><b>03</b><h3>Executar</h3><p>Colocamos a operação em movimento, acompanhando qualidade, prazos e experiência.</p></div>
-          <div><b>04</b><h3>Acompanhar</h3><p>Transformamos operação em visibilidade: indicadores, aprendizados e evolução contínua.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section human" id="quem-somos">
+    <section class="section premium-services" id="o-que-fazemos"><div class="wrap"><div class="section-heading"><p class="eyebrow">O que fazemos</p><h2>Duas frentes. O mesmo compromisso com a execução.</h2></div><div class="service-grid two-services"><a class="service-card" href="operacoes-digitais.html"><span>01</span><h3>Operações Digitais &amp; Marketplace</h3><p>Estruturamos e assumimos rotinas de marketplace e e-commerce, conectando catálogo, sistemas, canais, pedidos, estoque, logística, atendimento, indicadores e automações.</p><small>Conhecer a operação digital ↗</small></a><a class="service-card dark" href="press-kits.html"><span>02</span><h3>Press Kits &amp; Operações de Marca</h3><p>Planejamos e executamos projetos que envolvem recebimento, armazenagem, personalização, montagem, controle, expedição e acompanhamento.</p><small>Conhecer a operação física ↗</small></a></div></div></section>
+<section class="section visual-story"><div class="wrap"><div class="section-heading"><p class="eyebrow">Experiência em movimento</p><h2>Experiência que conecta o físico e o digital.</h2></div><div class="experience-grid"><article class="experience-card"><h3>Operação física</h3><div class="mini-proof"><div><b>+70</b><span>projetos executados</span></div><div><b>+10 mil</b><span>itens expedidos</span></div></div><p>Experiência em recebimento, armazenagem, personalização, montagem, conferência, controle e logística.</p></article><article class="experience-card"><h3>Operação digital</h3><p>Experiência na estruturação de operações conectando ERP, hub, e-commerce, marketplaces, catálogo, pedidos, estoque, logística e indicadores.</p><p><b>Gestão construída a partir da rotina real de cada empresa, com prioridades, responsáveis e acompanhamento.</b></p></article></div></div></section>
+<section class="section proof-section"><div class="wrap"><div class="section-heading"><p class="eyebrow">Experiência aplicada</p><h2>Operações que já colocamos em movimento.</h2><p class="section-intro">Experiências reais em projetos físicos e digitais, apresentadas sem expor informações confidenciais dos nossos clientes.</p></div><div class="proof-grid"><article><span>Operação editorial e projetos recorrentes</span><h3>Produção e expedição de kits personalizados</h3><p class="case-detail"><b>Desafio:</b> Muitos materiais, públicos, personalizações e regras de envio dentro do mesmo projeto.</p><p class="case-detail"><b>Atuação Bora:</b> Recebimento, conferência, armazenagem, personalização, montagem, controle, expedição e acompanhamento.</p><p class="case-detail"><b>Estrutura criada:</b> Fluxo operacional com checklists, rastreabilidade e visibilidade das entregas.</p></article><article><span>Varejo e operação multicanal</span><h3>Estruturação de e-commerce e marketplaces</h3><p class="case-detail"><b>Desafio:</b> Catálogo distribuído, canais sem prioridade clara e sistemas que não acompanhavam a rotina da empresa.</p><p class="case-detail"><b>Atuação Bora:</b> Mapeamento de ERP, hub, e-commerce, marketplaces, catálogo, estoque, logística e responsabilidades.</p><p class="case-detail"><b>Estrutura criada:</b> Arquitetura operacional, plano de prioridades e rotina de acompanhamento dos canais.</p></article><article><span>Logística e informação</span><h3>Controle de devoluções e ocorrências</h3><p class="case-detail"><b>Desafio:</b> Informações dispersas, status pouco visíveis e alto esforço manual para acompanhar cada ocorrência.</p><p class="case-detail"><b>Atuação Bora:</b> Organização dos dados, classificação dos status, integração de informações e construção de indicadores.</p><p class="case-detail"><b>Estrutura criada:</b> Rotina acompanhável para identificar pendências, responsáveis e próximos passos.</p></article></div></div></section>
+<section class="section assurance-section"><div class="wrap"><div class="section-heading"><p class="eyebrow">Segurança operacional</p><h2>Sua operação não pode depender de uma única pessoa.</h2><p class="section-intro">A Bora combina participação direta dos responsáveis pelo projeto com processos registrados, prioridades visíveis e acompanhamento contínuo. Assim, o conhecimento não fica perdido em conversas e a empresa sabe o que está sendo feito, o que precisa de decisão e qual é o próximo passo.</p></div><div class="assurance-grid"><article><h3>Responsáveis definidos</h3><p>Cada frente possui responsáveis e prioridades claras.</p></article><article><h3>Rotina documentada</h3><p>Processos, tarefas e aprendizados permanecem registrados.</p></article><article><h3>Acompanhamento</h3><p>Riscos, entregas e próximos passos são revistos continuamente.</p></article><article><h3>Continuidade</h3><p>A operação é organizada para não depender do conhecimento isolado de uma pessoa.</p></article></div></div></section>
+<section class="section method-section" id="metodo-bora"><div class="wrap"><div class="section-heading narrow"><p class="eyebrow">Método Bora Fazer</p><h2>Uma parceria que entra na realidade da sua operação.</h2></div><div class="timeline five-steps"><div><b>01</b><h3>Entender</h3><p>Entramos na realidade da empresa para compreender objetivos, pessoas, produtos, sistemas e prioridades.</p></div><div><b>02</b><h3>Diagnosticar</h3><p>Mapeamos gargalos, riscos, dependências e oportunidades antes de propor mudanças.</p></div><div><b>03</b><h3>Estruturar</h3><p>Definimos processos, responsabilidades, ferramentas, indicadores e sequência de execução.</p></div><div><b>04</b><h3>Implementar</h3><p>Colocamos a operação em movimento, participando da rotina e acompanhando as entregas.</p></div><div><b>05</b><h3>Evoluir</h3><p>Usamos dados, aprendizados e novas necessidades para melhorar continuamente a operação.</p></div></div></div></section>
+<section class="section human" id="quem-somos">
       <div class="wrap human-grid">
         <div class="human-photo">
           <img src="assets/operacoes-digitais.png" alt="Mesa de operações digitais conectando pedidos, processos e logística">

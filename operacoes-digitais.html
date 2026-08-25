@@ -3,26 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Organização para marketplace, e-commerce, catálogo, pedidos, estoque, logística e indicadores.">
-  <title>Operações Digitais & Marketplace | Bora Fazer</title>
+  <meta name="description" content="Gestão de marketplace e operações digitais conectando e-commerce, ERP, hub, catálogo, pedidos, estoque, logística, atendimento, indicadores e automações.">
+  <title>Gestão de Marketplace e Operações Digitais | Bora Fazer</title>
   <link rel="stylesheet" href="styles.css?v=5">
   <link rel="stylesheet" href="premium.css?v=5">
-</head>
+<style>
+.service-grid.two-services{grid-template-columns:repeat(2,minmax(0,1fr))}
+.timeline.five-steps{grid-template-columns:repeat(5,minmax(0,1fr))}
+.proof-section,.ecosystem-section{background:#eef8fc}
+.section-intro{max-width:720px;color:#607585;font-size:17px}
+.experience-grid,.proof-grid,.start-grid,.assurance-grid,.visibility-grid{display:grid;gap:18px;margin-top:42px}
+.experience-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.proof-grid,.start-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.assurance-grid,.visibility-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.experience-card,.proof-grid article,.start-grid article,.assurance-grid article,.visibility-grid div{background:#fff;border:1px solid #d7e8f1;border-radius:16px;padding:28px}
+.experience-card h3,.proof-grid h3,.start-grid h3{font-size:23px;line-height:1.18;margin-bottom:14px}
+.experience-card p,.proof-grid p,.start-grid p,.assurance-grid p,.visibility-grid span{font-size:14px;color:#617486;margin:0}
+.experience-card .mini-proof{margin:18px 0;grid-template-columns:repeat(2,1fr)}
+.proof-grid>article>span,.start-grid>article>span,.assumed-grid small{display:block;color:#ff4b26;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;margin-bottom:18px}
+.case-detail{border-top:1px solid #d7e8f1;padding-top:13px;margin-top:13px!important}.case-detail b{color:#075f97}
+.assurance-section{background:#062f52;color:#fff}.assurance-section .eyebrow{color:#9bd8ed}.assurance-section .section-intro,.assurance-grid p{color:#c6e1ed}.assurance-grid article{background:#ffffff0d;border-color:#ffffff35}.assurance-grid h3{font-size:15px}
+.assumed-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.assumed-grid article{min-height:235px}
+.ecosystem-layout{align-items:start}.ecosystem-groups{display:grid;gap:24px}.ecosystem-groups>div{background:#fff;border:1px solid #d7e8f1;border-radius:16px;padding:25px}.badge-list{display:flex;flex-wrap:wrap;gap:9px}.badge-list span{border:1px solid #bcdbe8;background:#f8fcfe;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:700;color:#075f97}
+.demo-note{grid-column:1/-1;background:#fff5f1;color:#82402f!important;border:1px solid #ffd5ca;border-radius:8px;padding:10px 12px;font-size:11px!important}
+.method-flow-detailed>div{height:auto!important;min-height:210px!important;align-items:flex-start!important;justify-content:flex-start!important;flex-direction:column;padding:20px!important}.method-flow-detailed p{font-size:12px;color:#617486;margin:10px 0 0}.team-placeholder{border:1px dashed #bcdbe8;border-radius:10px;padding:13px;color:#617486;font-size:12px}
+.visibility-section{background:#f4f9fc}.visibility-grid div{display:flex;flex-direction:column;gap:6px}.visibility-grid b{color:#075f97}.visibility-grid span{display:block}
+@media(max-width:900px){.timeline.five-steps,.assumed-grid,.assurance-grid,.visibility-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.proof-grid,.start-grid{grid-template-columns:1fr}}
+@media(max-width:680px){.service-grid.two-services,.timeline.five-steps,.assumed-grid,.experience-grid,.assurance-grid,.visibility-grid{grid-template-columns:1fr}.proof-grid article,.start-grid article,.experience-card{padding:22px}.method-flow-detailed>div{min-height:0!important}}
+</style></head>
 <body>
   <header class="header">
     <div class="wrap nav-wrap">
       <a class="logo" href="index.html"><img src="assets/bora-fazer-logo-nav.png" alt="Bora Fazer"></a>
       <button class="nav-toggle" aria-label="Abrir menu">☰</button>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="index.html#o-que-fazemos">O Que Fazemos</a>
-        <a href="press-kits.html">Press Kits</a>
-        <a href="operacoes-digitais.html">Operações Digitais</a>
-        <a href="projetos-especiais.html">Projetos Especiais</a>
-        <a href="quem-somos.html">Quem Somos</a>
-        <a class="diagnostic-link" href="diagnostico/">Diagnóstico</a>
-        <a class="contact" href="index.html#contato">Contato</a>
-      </nav>
+      <nav class="nav"><a href="index.html">Home</a><a href="operacoes-digitais.html">Operações Digitais</a><a href="press-kits.html">Press Kits</a><a href="index.html#metodo-bora">Como Trabalhamos</a><a href="quem-somos.html">Quem Somos</a><a class="diagnostic-link" href="diagnostico/">Diagnóstico</a><a class="contact" href="index.html#contato">Contato</a></nav>
     </div>
   </header>
 
@@ -31,8 +45,8 @@
       <div class="wrap sub-hero-grid">
         <div>
           <p class="story-label">Operações digitais & marketplace</p>
-          <h1>Organização para crescer no digital.</h1>
-          <p>Estruturamos toda a operação de marketplace para que sua empresa venda online com mais controle, organização e previsibilidade.</p>
+          <h1>Gestão de marketplace que entra na operação de verdade.</h1>
+          <p><b>Marketplace é um canal. A operação digital é o que sustenta a venda.</b> Da estruturação inicial à rotina dos canais, conectamos marketplace, e-commerce, ERP, hub, catálogo, pedidos, estoque, logística, atendimento, indicadores e automações para transformar vendas digitais em uma rotina acompanhável e preparada para crescer.</p>
           <a class="btn primary" href="diagnostico/">Fazer diagnóstico digital</a>
         </div>
         <figure>
@@ -44,21 +58,7 @@
     <section class="section marketplace-depth">
       <div class="wrap">
         <div class="section-heading">
-          <p class="eyebrow">Muito além da publicação de produtos</p>
-          <h2>Marketplace não é só cadastrar anúncio. É operar um canal inteiro com controle.</h2>
-        </div>
-        <div class="market-grid">
-          <article><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h10"/><path d="M4 17h16"/></svg><b>Cadastro e padronização</b><span>Informações consistentes para reduzir ruído.</span></article>
-          <article><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg><b>Estruturação de anúncios</b><span>Organização para vender melhor em cada canal.</span></article>
-          <article><svg viewBox="0 0 24 24"><path d="M8 12h8"/><path d="M12 8v8"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="12" r="3"/></svg><b>ERP e HUB</b><span>Ferramentas conectadas para evitar retrabalho.</span></article>
-          <article><svg viewBox="0 0 24 24"><path d="M21 8 12 3 3 8l9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/></svg><b>Gestão de estoque</b><span>Disponibilidade acompanhada de perto.</span></article>
-          <article><svg viewBox="0 0 24 24"><path d="M6 3h12v18H6z"/><path d="M9 8h6"/><path d="M9 12h6"/><path d="M9 16h3"/></svg><b>Fluxo de pedidos</b><span>Rotina clara do pedido à expedição.</span></article>
-          <article><svg viewBox="0 0 24 24"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 2.8 17a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg><b>Gestão de divergências</b><span>Problemas tratados antes de virarem perda.</span></article>
-          <article><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-7"/></svg><b>Indicadores e dashboards</b><span>Dados visíveis para decisão operacional.</span></article>
-          <article><svg viewBox="0 0 24 24"><path d="M9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><b>Acompanhamento</b><span>Rotina de gestão para manter o canal saudável.</span></article>
-        </div>
-      </div>
-    </section>
+          <p class="eyebrow">Execução conectada</p><h2>O que assumimos na prática.</h2></div><div class="market-grid assumed-grid"><article><small>01</small><b>Estruturação</b><span>Diagnóstico da operação, definição dos canais prioritários e desenho da arquitetura entre empresa, ERP, hub, e-commerce e marketplaces.</span></article><article><small>02</small><b>Catálogo e publicação</b><span>Organização de informações, atributos, títulos, descrições, imagens, categorização, revisão, integração e publicação dos produtos.</span></article><article><small>03</small><b>Rotina operacional</b><span>Acompanhamento de pedidos, estoque, faturamento, divergências, prazos, cancelamentos, separação e expedição.</span></article><article><small>04</small><b>Saúde dos canais</b><span>Monitoramento de reputação, reclamações, devoluções, anúncios pausados, erros de integração e riscos operacionais.</span></article><article><small>05</small><b>Performance comercial</b><span>Leitura de preço, margem, competitividade, conversão, desempenho do catálogo e oportunidades por canal.</span></article><article><small>06</small><b>Gestão e acompanhamento</b><span>Prioridades definidas, responsáveis, indicadores, decisões registradas e próximos passos visíveis para a empresa.</span></article></div></div></section><section class="section ecosystem-section"><div class="wrap split-feature ecosystem-layout"><div><p class="eyebrow">Canais e tecnologias</p><h2>Uma operação conectada.</h2><p>A tecnologia não substitui a operação. Ela conecta informações, reduz retrabalho e ajuda a equipe a tomar decisões com mais segurança.</p></div><div class="ecosystem-groups"><div><h3>Marketplaces</h3><div class="badge-list"><span>Mercado Livre</span><span>Shopee</span><span>Amazon</span><span>Magalu</span><span>TikTok Shop</span></div></div><div><h3>Plataformas e integrações</h3><div class="badge-list"><span>AnyMarket</span><span>Bling</span><span>WooCommerce</span><span>Integrações logísticas</span><span>Dashboards e automações operacionais</span></div></div></div></div></section>
 
     <section class="section flow-section marketplace-flow-section">
       <div class="wrap">
@@ -119,7 +119,7 @@
           <h2>Componentes inspirados no Bora Core para organizar a gestão.</h2>
           <p>Dashboards e indicadores não são enfeite. Eles ajudam a transformar dados dispersos em rotina de acompanhamento: pedidos, estoque, performance, alertas e curva de vendas.</p>
         </div>
-        <div class="core-mockup" aria-label="Mockup ilustrativo de dashboard operacional">
+        <div class="core-mockup" aria-label="Mockup ilustrativo de dashboard operacional"><p class="demo-note">Visual demonstrativo de acompanhamento operacional. Indicadores e estrutura são adaptados à realidade de cada empresa.</p>
           <div class="mock-head"><b>Bora Core</b><span>Operação Marketplace</span></div>
           <div class="kpi-row">
             <div><small>Pedidos</small><b>248</b><em>+12%</em></div>
@@ -140,7 +140,7 @@
       </div>
     </section>
 
-    <section class="section benefits-section">
+    <section class="section start-section"><div class="wrap"><div class="section-heading narrow"><p class="eyebrow">Primeiros passos</p><h2>Como a operação começa.</h2></div><div class="start-grid"><article><span>Dias 1–30</span><h3>Diagnóstico e prioridades</h3><p>Acessos, canais, catálogo, sistemas, integrações, responsabilidades, riscos e indicadores iniciais.</p></article><article><span>Dias 31–60</span><h3>Estruturação e correções</h3><p>Organização do fluxo, correções críticas, catálogo, integrações, rotina e acompanhamento dos canais prioritários.</p></article><article><span>Dias 61–90</span><h3>Operação e evolução</h3><p>Gestão contínua, indicadores, oportunidades, novos ciclos e planejamento da expansão.</p></article></div></div></section><section class="section benefits-section">
       <div class="wrap">
         <div class="section-heading">
           <p class="eyebrow">Benefícios</p>
@@ -155,7 +155,7 @@
       </div>
     </section>
 
-    <section class="section cta-panel">
+    <section class="section visibility-section"><div class="wrap"><div class="section-heading"><p class="eyebrow">Acompanhamento contínuo</p><h2>Você sabe o que está sendo feito.</h2><p class="section-intro">Prioridades, pendências, responsáveis, indicadores e decisões fazem parte da rotina de acompanhamento. A empresa não precisa esperar o fechamento do mês para descobrir onde a operação travou.</p></div><div class="visibility-grid"><div><b>Prioridades visíveis</b><span>O que vem primeiro fica claro para todos.</span></div><div><b>Pendências acompanhadas</b><span>Riscos e bloqueios permanecem no radar.</span></div><div><b>Decisões registradas</b><span>O histórico não se perde em conversas.</span></div><div><b>Próximos passos definidos</b><span>Cada ciclo termina com responsáveis e sequência.</span></div></div></div></section><section class="section cta-panel">
       <div class="wrap panel">
         <div>
           <p class="story-label">Vamos estruturar sua operação digital?</p>

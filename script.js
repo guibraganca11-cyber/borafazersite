@@ -1,6 +1,6 @@
 const extraStyles = document.createElement("link");
 extraStyles.rel = "stylesheet";
-extraStyles.href = "anniversary.css?v=2";
+extraStyles.href = "anniversary (1).css?v=2";
 document.head.append(extraStyles);
 
 const menuToggle = document.querySelector(".nav-toggle");

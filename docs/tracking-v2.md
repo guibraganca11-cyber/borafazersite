@@ -2,37 +2,50 @@
 
 ## Implementado no código
 
-- Google Tag Manager GTM-T2DK6BD6 em todas as páginas da V2.
-- Data Layer sem nome, e-mail, telefone, empresa ou mensagem.
-- Persistência durante a sessão de utm_source, utm_medium, utm_campaign, utm_content, utm_term, gclid, fbclid, primeira página e referrer inicial.
-- Persistência da página de origem, serviço de interesse e CTA de origem para continuidade entre páginas e envio interno ao Apps Script.
-- Eventos de interesse: service_view, service_click, case_view, case_cta_click e method_view.
-- Eventos de ação: cta_click, whatsapp_click, form_start, lead_form_attempt, diagnostico_click e diagnostico_iframe_load.
-- Evento de profundidade: scroll_depth.
-- page_view não é emitido pelo código para evitar duplicidade com GA4/GTM.
-- O endpoint de Google Apps Script e o WhatsApp atuais foram preservados somente no código.
-- A tentativa de envio pelo iframe oculto não permite ler uma confirmação confiável do Apps Script. Por isso, lead_form_submit não é emitido.
-- A abertura do WhatsApp não é tratada como confirmação do registro do lead.
-- gclid e fbclid ficam preservados internamente e podem acompanhar o lead, mas não são incluídos automaticamente nos eventos do Data Layer.
+- Google Tag Manager `GTM-T2DK6BD6` nas seis páginas V2: Home, Operações Digitais, Press Kits, Como Trabalhamos, Quem Somos e Diagnóstico.
+- Data Layer sem nome, e-mail, telefone, empresa, cargo, cidade, mensagem ou respostas de formulário.
+- Persistência em sessão de `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term`, `gclid`, `fbclid`, primeira página e referrer inicial.
+- Persistência de página de origem, serviço de interesse e CTA de origem entre páginas e no envio interno ao Apps Script.
+- Eventos: `cta_click`, `service_view`, `service_click`, `case_view`, `case_cta_click`, `method_view`, `whatsapp_click`, `form_start`, `lead_form_attempt`, `diagnostico_click`, `diagnostico_iframe_load` e `scroll_depth`.
+- `page_view` não é emitido pelo código, evitando duplicidade com GA4 via GTM.
+- Endpoint atual do Apps Script, número oficial do WhatsApp, iframe externo do Diagnóstico e seus parâmetros foram preservados.
+- A abertura do WhatsApp não é tratada como confirmação de lead.
+- `gclid` e `fbclid` ficam no contexto interno e podem acompanhar o lead, mas não entram automaticamente nos eventos analíticos.
+
+## IDs estáveis dos CTAs
+
+| CTA visível | `cta_id` atual | ID anterior documentado para migração |
+| --- | --- | --- |
+| Entender minha operação | `hero_diagnostico` | — |
+| Falar com a Bora | `hero_whatsapp` | `whatsapp_home_hero` |
+| Conhecer a operação digital | `operacoes_digitais_cta` | `service_digital` |
+| Conversar sobre um projeto físico | `press_kits_cta` | `service_press` / `whatsapp_press_press_final` |
+| Conhecer a Bora Fazer | `quem_somos_cta` | `about_experience` |
+| Ver como trabalhamos | `metodo_cta` | `method_more` |
+
+Os aliases anteriores permanecem no HTML em `data-legacy-cta-id` para uma migração explícita das variáveis e dos gatilhos no GTM.
 
 ## Parâmetros de funil
 
-Os eventos utilizam, conforme a interação: page_path, page_title, section_origin, service_interest, service_name, case_id, cta_id, cta_text, whatsapp_location, primeira página, referrer inicial e UTMs.
+Conforme a interação: `page_path`, `page_title`, `section_origin`, `cta_id`, `cta_text`, `service_name`, `service_interest`, `case_id`, `whatsapp_location`, UTMs, primeira página e referrer inicial.
 
-Os CTAs das páginas Operações Digitais e Press Kits registram o interesse correspondente antes da navegação. Esse contexto permanece disponível ao chegar ao Diagnóstico ou ao formulário.
+Operações Digitais preserva `service_interest = operacoes_digitais`; Press Kits preserva `service_interest = press_kits`. O contexto continua disponível ao navegar para Home, formulário, WhatsApp ou Diagnóstico.
 
-## Pendente nas contas
+## Dados internos enviados ao Apps Script
+
+Nome, empresa, telefone, e-mail e mensagem permanecem restritos ao payload interno do formulário. O envio também mantém origem, página, serviço de interesse, UTMs, `gclid`, `fbclid`, referrer inicial e primeira página quando disponíveis. Esses dados pessoais não são enviados ao Data Layer.
+
+## Conversões bloqueadas no código
+
+- `lead_form_submit`: depende de confirmação confiável do Apps Script.
+- `diagnostico_complete`: depende de `postMessage`, redirecionamento controlado ou evento confiável da aplicação externa.
+
+## Pendente em contas externas
 
 - Propriedade e Measurement ID do GA4.
-- Tags, variáveis e gatilhos no GTM.
-- Conversões do GA4.
+- Tags, variáveis, gatilhos e marcação de conversões no GTM.
 - Projeto e ID do Microsoft Clarity.
-- Testes no GTM Preview e no GA4 DebugView.
+- Teste futuro no GTM Preview e no GA4 DebugView.
 - Política de Privacidade com dados jurídicos confirmados.
 
-## Conversões não implementadas
-
-- lead_form_submit: depende de confirmação confiável do Apps Script.
-- diagnostico_complete: depende de acesso ao código-fonte externo, comunicação via window.postMessage, redirecionamento controlado ou evento emitido pela aplicação externa.
-
-A conclusão do Diagnóstico não pode ser inferida pelo site principal apenas observando o iframe.
+Nenhum ID de GA4 ou Clarity foi inventado no código.

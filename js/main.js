@@ -41,6 +41,7 @@ function trackingContext() {
     service_interest: attribution.service_interest || "",
     first_page: attribution.first_page || "",
     initial_referrer: attribution.initial_referrer || "",
+    referrer: attribution.initial_referrer || "",
     utm_source: attribution.utm_source || "",
     utm_medium: attribution.utm_medium || "",
     utm_campaign: attribution.utm_campaign || "",

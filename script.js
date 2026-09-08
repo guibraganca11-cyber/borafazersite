@@ -15,7 +15,7 @@ menuToggle?.addEventListener("click", () => {
 
 const whatsappNumber = "5521967171986";
 const endpoint =
-  "https://script.google.com/macros/s/AKfycbwkUJDdyzdemm3-ntAloGPp5KKOL7hW3GnVDnh88MsNboxRCuMuV7PZvhmOzran28wC/exec";
+  "https://script.google.com/macros/s/AKfycbyoi5bYWhfFN3w3CMOD2H5rwKkHcAN9jtiBERKfmLU6A0wXaMVNA8WB8xJ80Fzussh8yA/exec";
 
 function saveLead(data) {
   const frame = document.createElement("iframe");

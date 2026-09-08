@@ -1,5 +1,5 @@
 const BORA_CONFIG = {
-  appsScriptUrl: "https://script.google.com/macros/s/AKfycbwkUJDdyzdemm3-ntAloGPp5KKOL7hW3GnVDnh88MsNboxRCuMuV7PZvhmOzran28wC/exec",
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbyoi5bYWhfFN3w3CMOD2H5rwKkHcAN9jtiBERKfmLU6A0wXaMVNA8WB8xJ80Fzussh8yA/exec",
   whatsappNumber: "5521967171986"
 };
 

@@ -282,7 +282,9 @@ document.querySelectorAll("[data-lead-form]").forEach((form) => {
       status.dataset.state = "success";
       status.textContent = "Tentativa de registro enviada. O WhatsApp será aberto para continuar a conversa.";
 
-      const message = `Olá, meu nome é ${data.nome}. Empresa: ${data.empresa || "não informada"}. Gostaria de conversar sobre ${data.mensagem || "as operações da Bora Fazer"}.`;
+      const message = form.dataset.origin === "bora-pocket-evento"
+        ? `Olá! Conheci o Bora Pocket e quero entender se ele funciona para minha empresa. Nome: ${data.nome}. Empresa: ${data.empresa}. WhatsApp: ${data.telefone}. E-mail: ${data.email}. Gostaria de enxergar: ${data.mensagem}.`
+        : `Olá, meu nome é ${data.nome}. Empresa: ${data.empresa || "não informada"}. Gostaria de conversar sobre ${data.mensagem || "as operações da Bora Fazer"}.`;
       window.open(`https://wa.me/${BORA_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
 
       setTimeout(() => {

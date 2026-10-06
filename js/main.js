@@ -83,7 +83,7 @@ nav?.addEventListener("click", (event) => {
 });
 
 addEventListener("resize", () => {
-  if (innerWidth > 720) closeMenu();
+  if (innerWidth > 860) closeMenu();
 });
 
 document.addEventListener("click", (event) => {

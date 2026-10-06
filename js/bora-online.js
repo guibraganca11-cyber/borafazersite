@@ -34,7 +34,7 @@
   let busy = false;
 
   const validate = () => {
-    ['nome', 'empresa', 'telefone', 'email', 'vende_online', 'tem_loja', 'desafio'].forEach(name => {
+    ['nome', 'empresa', 'telefone', 'estagio', 'desafio'].forEach(name => {
       const field = form.elements[name];
       field.setCustomValidity(field.value.trim() ? '' : 'Preencha este campo.');
     });
@@ -54,8 +54,7 @@
       'Olá! Quero entender como o Bora Online pode ajudar minha empresa.',
       `Nome: ${data.nome}`,
       `Empresa: ${data.empresa}`,
-      `Hoje vende online: ${data.vende_online}`,
-      `Loja virtual: ${data.tem_loja}`,
+      `Momento atual: ${data.estagio}`,
       `Principal desafio: ${data.desafio}`
     ].join('\n');
     return `https://wa.me/${BORA_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -72,8 +71,7 @@
     delete data.website;
     Object.keys(data).forEach(key => data[key] = String(data[key] || '').trim());
     data.mensagem = [
-      `Hoje vende online: ${data.vende_online}`,
-      `Já tem loja virtual: ${data.tem_loja}`,
+      `Momento atual: ${data.estagio}`,
       `Principal desafio: ${data.desafio}`
     ].join(' | ');
 

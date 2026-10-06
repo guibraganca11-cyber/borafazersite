@@ -312,3 +312,43 @@ if (diagnosticFrame) {
     });
   }, { once: true });
 }
+
+// Navegação global V2: dropdowns acessíveis por clique, teclado e toque.
+const navGroups = [...document.querySelectorAll('.nav-group')];
+function closeNavDropdowns(except) {
+  navGroups.forEach((group) => {
+    if (group === except) return;
+    group.classList.remove('open');
+    group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false');
+  });
+}
+navGroups.forEach((group) => {
+  group.dataset.navDropdownV2 = '';
+  const trigger = group.querySelector('.nav-trigger');
+  trigger?.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const opening = trigger.getAttribute('aria-expanded') !== 'true';
+    closeNavDropdowns(group);
+    group.classList.toggle('open', opening);
+    trigger.setAttribute('aria-expanded', String(opening));
+  });
+  group.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+});
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.nav-group')) closeNavDropdowns();
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeNavDropdowns();
+    closeMenu();
+    menuButton?.focus();
+  }
+});
+const currentPath = location.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+document.querySelectorAll('#main-nav a').forEach((link) => {
+  const linkPath = new URL(link.href, location.href).pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+  if (linkPath === currentPath) {
+    link.setAttribute('aria-current', 'page');
+    link.closest('.nav-group')?.querySelector('.nav-trigger')?.classList.add('has-current');
+  }
+});

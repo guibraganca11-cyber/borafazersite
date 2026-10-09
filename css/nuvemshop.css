@@ -1,0 +1,265 @@
+/* Landing page /nuvemshop — Bora Online com implantação na Nuvemshop */
+.ns-page{
+  --ns-navy:#062536;
+  --ns-deep:#0b354a;
+  --ns-orange:#ff5128;
+  --ns-orange-strong:#b73a1c;
+  --ns-orange-soft:#ff9a7a;
+  --ns-warm:#f5f4ef;
+  --ns-paper:#fbfaf7;
+  --ns-ink:#123247;
+  --ns-muted:#4f6773;
+  --ns-line:#d3dfe4;
+  --ns-on-dark:#c7dbe4;
+  background:var(--ns-paper);
+  color:var(--ns-ink);
+  overflow-x:hidden;
+}
+.ns-page h1,.ns-page h2,.ns-page h3{font-family:var(--display);color:var(--ns-deep)}
+.ns-page img{max-width:100%}
+.ns-small{font-size:.84rem;line-height:1.6;color:var(--ns-muted)}
+
+/* Cabeçalho simplificado */
+.ns-header{position:sticky;top:0;z-index:120;background:rgba(251,250,247,.97);border-bottom:1px solid var(--ns-line);backdrop-filter:blur(12px)}
+.ns-header-inner{display:flex;align-items:center;gap:20px;height:76px}
+.ns-brand img{width:128px;height:60px;object-fit:contain}
+.ns-partner-tag{display:flex;align-items:center;gap:6px;margin:0;padding:7px 12px;border:1px solid var(--ns-line);border-radius:999px;background:#fff;font-size:.8rem;line-height:1.2;color:var(--ns-muted)}
+.ns-partner-tag strong{color:var(--ns-deep);font-weight:800}
+.ns-header-cta{margin-left:auto;min-height:46px;padding:11px 18px}
+
+/* Botões */
+.ns-page .button-primary{background:var(--ns-orange-strong);color:#fff}
+.ns-page .button-primary:hover{background:#942d16}
+.ns-button-lg{min-height:56px;padding:15px 26px;font-size:.95rem}
+
+/* 1. Primeira tela */
+.ns-hero{position:relative;padding:72px 0 80px;background:var(--ns-navy);color:#fff}
+.ns-hero-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);align-items:center;gap:56px}
+.ns-hero .eyebrow{color:#a6d9e9}
+.ns-hero h1{margin:0 0 22px;color:#fff;font-size:clamp(2.5rem,4.3vw,3.7rem);font-weight:800;line-height:1.08;letter-spacing:-.045em;text-wrap:balance}
+.ns-hero h1 span{color:var(--ns-orange-soft)}
+.ns-lead{max-width:560px;margin:0 0 30px;color:var(--ns-on-dark);font-size:1.06rem;line-height:1.75}
+.ns-hero-actions{display:grid;justify-items:start;gap:12px}
+.ns-hero-support{margin:0;color:var(--ns-on-dark);font-size:.9rem}
+.ns-offer{margin-top:30px;padding:18px 20px;border-left:4px solid var(--ns-orange);border-radius:4px 12px 12px 4px;background:rgba(255,255,255,.06)}
+.ns-offer-main{margin:0 0 6px;color:#fff;font-size:1.02rem;line-height:1.5}
+.ns-offer-main strong{color:var(--ns-orange-soft);font-family:var(--display);font-size:1.15rem}
+.ns-offer-note{margin:0;color:#a9c3cf;font-size:.82rem;line-height:1.55}
+
+.ns-hero-visual{margin:0;min-width:0}
+.ns-devices{position:relative;padding-right:42px}
+.ns-browser{overflow:hidden;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:#fff;box-shadow:0 30px 70px rgba(0,10,20,.45)}
+.ns-browser-bar{display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;background:#e9eef0;border-bottom:1px solid #d4dde1}
+.ns-browser-bar i{width:9px;height:9px;border-radius:50%;background:#b8c6cc}
+.ns-browser-bar span{flex:1;max-width:46%;height:14px;margin-left:12px;border-radius:7px;background:#fff}
+.ns-browser img{display:block;width:100%;height:auto;aspect-ratio:1600/860}
+.ns-phone{position:absolute;right:0;bottom:-28px;width:150px;padding:7px;border-radius:24px;background:#0d1b24;box-shadow:0 24px 50px rgba(0,10,20,.5)}
+.ns-phone img{display:block;width:100%;height:auto;aspect-ratio:207/368;border-radius:17px}
+.ns-hero-visual figcaption{margin-top:20px;max-width:calc(100% - 190px);color:#a9c3cf;font-size:.8rem;line-height:1.55}
+
+/* Estrutura de seções */
+.ns-section{padding:96px 0}
+.ns-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:end;gap:56px;margin-bottom:44px}
+.ns-head h2,.ns-benefits-intro h2,.ns-partner h2,.ns-after h2,.ns-faq h2,.ns-final h2{margin:0;font-size:clamp(2rem,3.3vw,2.8rem);font-weight:800;line-height:1.14;letter-spacing:-.04em;text-wrap:balance}
+.ns-head p{margin:0;color:var(--ns-muted);font-size:1.02rem;line-height:1.75}
+.ns-head:only-child,.ns-head:has(h2:only-child){grid-template-columns:1fr}
+
+/* 2. Galeria */
+.ns-gallery{background:var(--ns-paper)}
+.ns-gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0;padding:0;list-style:none}
+.ns-shot h3{margin:20px 0 8px;font-size:1.2rem;line-height:1.3}
+.ns-shot p{margin:0;color:var(--ns-muted);font-size:.95rem;line-height:1.7}
+.ns-shot-open{position:relative;display:block;width:100%;padding:0;border:1px solid var(--ns-line);border-radius:12px;overflow:hidden;background:#fff;cursor:zoom-in;box-shadow:0 10px 30px rgba(16,58,71,.08)}
+.ns-shot-open img{display:block;width:100%;height:auto;aspect-ratio:1600/860;object-fit:cover;object-position:top}
+.ns-zoom-hint{position:absolute;right:12px;bottom:12px;padding:6px 11px;border-radius:999px;background:rgba(6,37,54,.85);color:#fff;font-size:.75rem;font-weight:700}
+.ns-shot-open:hover .ns-zoom-hint,.ns-shot-open:focus-visible .ns-zoom-hint{background:var(--ns-orange-strong)}
+.ns-shot-open:focus-visible{outline:3px solid #147da6;outline-offset:4px}
+.ns-demo-note{margin:30px 0 0;padding-top:18px;border-top:1px solid var(--ns-line);color:var(--ns-muted);font-size:.86rem}
+
+/* 3. Vantagens */
+.ns-benefits{background:#fff;border-block:1px solid var(--ns-line)}
+.ns-benefits-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:72px;align-items:start}
+.ns-benefits-intro h2{margin-bottom:34px}
+.ns-phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:440px}
+.ns-phones img{width:100%;height:auto;aspect-ratio:207/368;border:5px solid #0d1b24;border-radius:18px;background:#0d1b24}
+.ns-phones+.ns-small{margin:12px 0 0}
+.ns-benefit-list{margin:0;padding:0;list-style:none;counter-reset:b}
+.ns-benefit-list li{counter-increment:b;display:grid;grid-template-columns:44px 1fr;column-gap:16px;padding:22px 0;border-bottom:1px solid var(--ns-line)}
+.ns-benefit-list li:first-child{padding-top:0}
+.ns-benefit-list li:before{content:counter(b,upper-alpha);grid-row:span 2;display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:#f4e9e2;color:var(--ns-orange-strong);font:800 .95rem var(--display)}
+.ns-benefit-list h3{margin:0 0 4px;font-size:1.12rem;line-height:1.35}
+.ns-benefit-list p{margin:0;color:var(--ns-muted);font-size:.96rem;line-height:1.7}
+.ns-benefits-note{margin:20px 0 0}
+
+/* 3b. Ecossistema Nuvemshop */
+.ns-eco{background:var(--ns-warm)}
+.ns-eco .ns-head .eyebrow{margin-bottom:12px;color:#a6381d;font-size:.74rem}
+.ns-eco-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:0;padding:0;list-style:none}
+.ns-eco-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid #d9d5cc;border-radius:16px;background:#fff}
+.ns-eco-img{position:relative;aspect-ratio:4/3;background:#0c1f57}
+.ns-eco-img img{position:absolute;inset:16px;width:calc(100% - 32px);height:calc(100% - 32px);object-fit:contain}
+.ns-eco-card h3{margin:22px 24px 6px;color:var(--ns-deep);font-size:1.12rem;line-height:1.35}
+.ns-eco-card p{margin:0 24px 24px;color:var(--ns-muted);font-size:.94rem;line-height:1.65}
+.ns-eco-more{margin-top:22px;padding:26px 28px;border:1px solid #d9d5cc;border-radius:16px;background:#fff}
+.ns-eco-more-title{margin:0 0 14px;color:var(--ns-orange-strong);font-size:.78rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.ns-eco-more ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0;padding:0;list-style:none}
+.ns-eco-more b{display:block;margin-bottom:4px;color:var(--ns-deep);font:800 1rem/1.35 var(--display)}
+.ns-eco-more span{display:block;color:var(--ns-muted);font-size:.92rem;line-height:1.6}
+.ns-eco-note{margin:26px 0 0;color:var(--ns-muted);font-size:.88rem;line-height:1.6}
+
+/* 4. O que a Bora faz */
+.ns-bora{background:var(--ns-deep);color:#fff}
+.ns-bora h2{color:#fff}
+.ns-bora h2 span{color:var(--ns-orange-soft)}
+.ns-head-dark p{color:var(--ns-on-dark)}
+.ns-fronts{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));margin:0;padding:0;list-style:none;border-top:1px solid rgba(255,255,255,.18)}
+.ns-fronts li{padding:26px 22px 26px 0}
+.ns-fronts li+li{padding-left:22px;border-left:1px solid rgba(255,255,255,.14)}
+.ns-fronts span{color:var(--ns-orange-soft);font:800 .8rem var(--display);letter-spacing:.06em}
+.ns-fronts h3{margin:16px 0 8px;color:#fff;font-size:1.06rem;line-height:1.35}
+.ns-fronts p{margin:0;color:var(--ns-on-dark);font-size:.92rem;line-height:1.7}
+.ns-bora-note{margin:28px 0 0;padding:16px 18px;border-radius:10px;background:rgba(255,255,255,.07);color:var(--ns-on-dark);font-size:.92rem}
+
+/* 5. Personalização */
+.ns-fit{background:var(--ns-warm)}
+.ns-fit .ns-head{margin-bottom:34px}
+.ns-fit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:0;padding:0;list-style:none}
+.ns-fit-grid li{padding:26px;border:1px solid #d9d5cc;border-radius:14px;background:#fff}
+.ns-fit-grid small{display:block;margin-bottom:10px;color:var(--ns-orange-strong);font-size:.78rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.ns-fit-grid p{margin:0;color:var(--ns-deep);font:700 1.2rem/1.4 var(--display)}
+
+/* 6. Como acontece */
+.ns-steps-section{background:var(--ns-paper)}
+.ns-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin:0;padding:0;list-style:none}
+.ns-steps li{position:relative;padding-top:26px;border-top:2px solid var(--ns-line)}
+.ns-steps span{position:absolute;top:-19px;left:0;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--ns-deep);color:#fff;font:800 .95rem var(--display)}
+.ns-steps h3{margin:10px 0 8px;font-size:1.12rem;line-height:1.35}
+.ns-steps p{margin:0;color:var(--ns-muted);font-size:.95rem;line-height:1.7}
+
+/* 7. Parceria */
+.ns-partner{background:var(--ns-navy);color:#fff}
+.ns-partner h2{margin-bottom:18px;color:#fff}
+.ns-partner-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:64px;align-items:center}
+.ns-partner-text{max-width:560px;margin:0 0 28px;color:var(--ns-on-dark);font-size:1.02rem;line-height:1.75}
+.ns-partner-card{padding:34px;border-radius:18px;background:#fff;color:var(--ns-ink);border-top:6px solid var(--ns-orange)}
+.ns-partner-figure{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:0 0 18px;color:var(--ns-deep)}
+.ns-partner-figure strong{color:var(--ns-orange-strong);font:800 clamp(3.4rem,6vw,4.6rem)/1 var(--display);letter-spacing:-.04em}
+.ns-partner-figure span{font:800 1.3rem/1.3 var(--display)}
+.ns-partner-clarify{margin:0;padding-top:16px;border-top:1px solid var(--ns-line);color:var(--ns-muted);font-size:.9rem;line-height:1.65}
+
+/* 8. Depois */
+.ns-after{padding:72px 0;background:#fff;border-bottom:1px solid var(--ns-line)}
+.ns-after-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.ns-after p{margin:0 0 12px;color:var(--ns-muted);font-size:1.02rem;line-height:1.75}
+.ns-after .ns-small{font-size:.86rem}
+
+/* 9. FAQ */
+.ns-faq{background:var(--ns-paper)}
+.ns-faq-grid{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:64px}
+.ns-faq .faq details{border:1px solid var(--ns-line);border-radius:12px;background:#fff}
+.ns-faq .faq summary{padding:18px 22px;color:var(--ns-deep);line-height:1.5}
+.ns-faq .faq summary::-webkit-details-marker{display:none}
+.ns-faq .faq details p{color:var(--ns-muted);line-height:1.7}
+
+/* 10. Conversão final */
+.ns-final{padding:88px 0;background:var(--ns-deep);color:#fff}
+.ns-final-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}
+.ns-final h2{margin-bottom:18px;color:#fff}
+.ns-final-copy>p{max-width:520px;color:var(--ns-on-dark);font-size:1.02rem;line-height:1.75}
+.ns-final-copy .button{margin-top:10px}
+.ns-final-copy .ns-final-support{margin:12px 0 0;font-size:.9rem}
+.ns-form{padding:28px;border:1px solid rgba(255,255,255,.18);border-radius:16px;background:rgba(255,255,255,.05)}
+.ns-form h3{margin:0 0 6px;color:#fff;font-size:1.15rem}
+.ns-form-intro{margin:0 0 18px;color:var(--ns-on-dark);font-size:.88rem}
+.ns-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ns-form .field label{color:var(--ns-on-dark);font-size:.8rem;font-weight:700}
+.ns-form .field input,.ns-form .field select{width:100%;min-height:48px;padding:11px 13px;border:1px solid rgba(255,255,255,.32);border-radius:8px;background:#0a2c40;color:#fff;font:inherit}
+.ns-form .field select option{background:#fff;color:var(--ns-ink)}
+.ns-form .field input::placeholder{color:#93b0be}
+.ns-form .field input:focus-visible,.ns-form .field select:focus-visible{outline:3px solid #ffad98;outline-offset:2px}
+.ns-submit{width:100%;margin-top:18px}
+.ns-form .form-status{min-height:22px;margin:10px 0 0;font-size:.85rem;color:var(--ns-on-dark)}
+.ns-form .form-status[data-state=error]{color:#ffb6a5}
+.ns-form .form-status[data-state=success]{color:#9ee2bb}
+.ns-fallback{width:100%;margin-top:6px}
+
+/* Rodapé compacto */
+.ns-footer{padding:30px 0;background:var(--ns-navy);color:#b7c8d2}
+.ns-footer-inner{display:flex;flex-wrap:wrap;align-items:center;gap:18px 32px}
+.ns-footer-brand img{width:110px;height:auto;filter:brightness(0) invert(1)}
+.ns-footer nav{display:flex;flex-wrap:wrap;gap:6px 22px}
+.ns-footer nav a{display:inline-block;padding:6px 0;color:#d5e3ea;font-size:.88rem;text-decoration:none}
+.ns-footer nav a:hover{color:#fff;text-decoration:underline}
+.ns-footer-legal{flex-basis:100%;margin:0;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);font-size:.78rem;color:#9fb6c2}
+
+/* Botão fixo no celular */
+.ns-sticky{display:none}
+
+/* Galeria ampliada */
+.ns-lightbox{width:min(1280px,calc(100% - 32px));max-width:none;max-height:calc(100dvh - 32px);padding:0;border:0;border-radius:14px;background:#fff;color:var(--ns-ink);overflow:auto}
+.ns-lightbox::backdrop{background:rgba(3,18,27,.82)}
+.ns-lightbox-inner{display:grid;gap:0}
+.ns-lightbox-top,.ns-lightbox-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px}
+.ns-lightbox-title{margin:0;font:800 1rem var(--display);color:var(--ns-deep)}
+.ns-lightbox img{display:block;width:100%;height:auto;aspect-ratio:1600/860;background:#eef2f3}
+.ns-lightbox-bottom .ns-small{margin:0;text-align:center}
+.ns-lb-close,.ns-lb-nav{min-height:44px;padding:10px 16px;border:1px solid var(--ns-line);border-radius:10px;background:#fff;color:var(--ns-deep);font-weight:700;font-size:.9rem}
+.ns-lb-close:hover,.ns-lb-nav:hover{border-color:var(--ns-deep)}
+.ns-lb-close:focus-visible,.ns-lb-nav:focus-visible{outline:3px solid #147da6;outline-offset:2px}
+body.ns-lb-open{overflow:hidden}
+
+/* Responsivo */
+@media (max-width:1080px){
+  .ns-hero-grid{grid-template-columns:1fr;gap:48px}
+  .ns-hero-copy{max-width:680px}
+  .ns-hero-visual{max-width:760px}
+  .ns-fronts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ns-fronts li,.ns-fronts li+li{padding:24px 22px 24px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.14)}
+  .ns-fronts li:nth-child(even){padding-left:22px;border-left:1px solid rgba(255,255,255,.14)}
+}
+@media (max-width:860px){
+  .ns-section{padding:68px 0}
+  .ns-head,.ns-benefits-grid,.ns-partner-grid,.ns-after-grid,.ns-faq-grid,.ns-final-grid{grid-template-columns:1fr;gap:28px}
+  .ns-head{margin-bottom:32px}
+  .ns-gallery-grid{grid-template-columns:1fr;gap:36px}
+  .ns-fit-grid,.ns-eco-more ul{grid-template-columns:1fr}
+  .ns-eco-grid{grid-template-columns:1fr 1fr}
+  .ns-steps{grid-template-columns:1fr 1fr;row-gap:44px}
+  .ns-benefits-grid{gap:40px}
+  .ns-phones{max-width:360px}
+}
+@media (max-width:640px){
+  .container{width:calc(100% - 32px)}
+  .ns-header-inner{height:66px;gap:10px}
+  .ns-brand img{width:84px;height:40px}
+  .ns-partner-tag{flex-direction:column;align-items:flex-start;gap:0;padding:4px 9px;border-radius:8px;font-size:.66rem;line-height:1.25}
+  .ns-header-cta{min-height:42px;padding:9px 12px;font-size:.78rem;white-space:nowrap}
+  .ns-hero{padding:44px 0 56px}
+  .ns-hero h1{font-size:clamp(2.1rem,9.6vw,2.7rem)}
+  .ns-lead{font-size:1rem}
+  .ns-hero-actions .button{width:100%}
+  .ns-devices{padding-right:30px}
+  .ns-hero-visual figcaption{max-width:none;margin-top:44px}
+  .ns-phone{width:96px;bottom:-30px;padding:5px;border-radius:16px}
+  .ns-phone img{border-radius:12px}
+  .ns-fronts{grid-template-columns:1fr}
+  .ns-fronts li:nth-child(n){padding:22px 0;border-left:0}
+  .ns-steps{grid-template-columns:1fr}
+  .ns-eco-grid{grid-template-columns:1fr}
+  .ns-partner-card{padding:26px}
+  .ns-partner .button,.ns-final-copy .button{width:100%}
+  .ns-form{padding:22px}
+  .ns-form-grid{grid-template-columns:1fr}
+  .ns-lightbox{width:calc(100% - 16px);max-height:calc(100dvh - 16px)}
+  .ns-lightbox-bottom .ns-small{display:none}
+  .ns-sticky{position:fixed;left:16px;right:16px;bottom:max(12px,env(safe-area-inset-bottom));z-index:110;display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:12px;background:var(--ns-orange-strong);color:#fff;font-weight:800;font-size:.95rem;text-decoration:none;box-shadow:0 10px 26px rgba(3,18,27,.3);transform:translateY(0);transition:transform .2s,opacity .2s}
+  .ns-sticky:not(.is-visible){transform:translateY(140%);opacity:0;pointer-events:none}
+  .ns-sticky:focus-visible{outline:3px solid #ffad98;outline-offset:3px}
+  .ns-footer{padding-bottom:96px}
+}
+@media (max-width:359px){
+  .ns-partner-tag{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .ns-sticky{transition:none}
+}

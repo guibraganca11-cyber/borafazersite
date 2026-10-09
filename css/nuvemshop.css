@@ -91,6 +91,19 @@
 .ns-benefit-list p{margin:0;color:var(--ns-muted);font-size:.96rem;line-height:1.7}
 .ns-benefits-note{margin:20px 0 0}
 
+/* 3b. Ecossistema Nuvemshop */
+.ns-eco{background:var(--ns-warm)}
+.ns-eco .ns-head .eyebrow{margin-bottom:12px;color:#a6381d;font-size:.74rem}
+.ns-eco-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.ns-eco-group{padding:28px;border:1px solid #d9d5cc;border-radius:16px;background:#fff}
+.ns-eco-group h3{margin:0 0 6px;padding-bottom:14px;border-bottom:2px solid var(--ns-orange);color:var(--ns-deep);font-size:1.08rem;line-height:1.35}
+.ns-eco-group ul{margin:0;padding:0;list-style:none}
+.ns-eco-group li{padding:16px 0;border-bottom:1px solid #ebe7df}
+.ns-eco-group li:last-child{padding-bottom:0;border-bottom:0}
+.ns-eco-group b{display:block;margin-bottom:4px;color:var(--ns-deep);font:800 1rem/1.35 var(--display)}
+.ns-eco-group span{display:block;color:var(--ns-muted);font-size:.93rem;line-height:1.65}
+.ns-eco-note{margin:26px 0 0;color:var(--ns-muted);font-size:.88rem;line-height:1.6}
+
 /* 4. O que a Bora faz */
 .ns-bora{background:var(--ns-deep);color:#fff}
 .ns-bora h2{color:#fff}
@@ -206,7 +219,7 @@ body.ns-lb-open{overflow:hidden}
   .ns-head,.ns-benefits-grid,.ns-partner-grid,.ns-after-grid,.ns-faq-grid,.ns-final-grid{grid-template-columns:1fr;gap:28px}
   .ns-head{margin-bottom:32px}
   .ns-gallery-grid{grid-template-columns:1fr;gap:36px}
-  .ns-fit-grid{grid-template-columns:1fr}
+  .ns-fit-grid,.ns-eco-grid{grid-template-columns:1fr}
   .ns-steps{grid-template-columns:1fr 1fr;row-gap:44px}
   .ns-benefits-grid{gap:40px}
   .ns-phones{max-width:360px}

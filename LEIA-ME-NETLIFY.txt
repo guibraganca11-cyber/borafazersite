@@ -4,8 +4,10 @@ SITE BORA FAZER — PACOTE NETLIFY
 2. Abra o site atual da Bora Fazer.
 3. Entre em Deploys.
 4. Arraste esta pasta completa para a área de deploy manual.
-5. Aguarde a publicação e teste o item “Diagnóstico” no menu.
+5. Aguarde a publicação e teste a página /diagnostico/.
 
-O diagnóstico continua hospedado separadamente, mas agora aparece integrado na
-rota /diagnostico/ do site. O menu da Bora Fazer permanece visível para que o
-visitante possa retornar às demais páginas normalmente.
+Diagnóstico (desde 13/10/2026): "Diagnóstico grátis da sua loja online".
+Fica dentro do próprio site (diagnostico/index.html + js/diagnostico.js +
+css/diagnostico.css). Não usa mais o iframe externo do ChatGPT.
+As respostas vão para o mesmo Apps Script dos formulários (js/main.js) e caem
+na aba "Leads" da planilha "Leads", com Origem = diagnostico-loja.

@@ -57,3 +57,4 @@ Nenhum ID de GA4 ou Clarity foi inventado no código.
 - Eventos novos (sem dados pessoais): `diagnostico_start`, `diagnostico_step`, `diagnostico_contact_view`, `diagnostico_complete` (só após confirmação do Apps Script), `diagnostico_restart`, além de `lead_form_attempt`, `lead_form_success` e `lead_form_error`.
 - `diagnostico_iframe_load` não é mais emitido. A aba **Diagnosticos** da planilha guarda o histórico do diagnóstico antigo.
 - CTAs novos: `home_final_diagnostico`, `operacoes_diagnostico`, `online_hero_diagnostico`, `diagnostico_resultado_whatsapp`.
+- Menu: botão "Diagnóstico grátis" (`nav_diagnostico`) ao lado de "Falar com a Bora" nas páginas com o menu principal (não entra nas landings /bora-pocket e /nuvemshop). Home: o segundo botão do topo passou de "Ver nossas soluções" (`hero_solucoes`) para "Fazer o diagnóstico grátis" (`hero_diagnostico`).

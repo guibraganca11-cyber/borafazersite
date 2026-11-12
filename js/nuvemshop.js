@@ -101,7 +101,7 @@
   form.addEventListener('focusin', () => {
     if (started) return;
     started = true;
-    window.dataLayer?.push({ event: 'form_start', section_origin: 'nuvemshop', service_interest: 'bora_online', page_path: location.pathname });
+    window.dataLayer?.push({ event: 'form_start', section_origin: 'nuvemshop', service_interest: 'bora_pocket', page_path: location.pathname });
   });
   form.addEventListener('input', (event) => event.target.setCustomValidity?.(''));
 
@@ -138,7 +138,7 @@
       email: '',
       mensagem: `Momento atual: ${data.estagio} | Interesse: loja Nuvemshop com a Bora (condição de parceria)`,
       desafio: 'Criação de loja na Nuvemshop',
-      produto: 'Bora Online · Nuvemshop',
+      produto: 'Bora Pocket · Nuvemshop',
       origem: 'nuvemshop',
       pagina: 'nuvemshop',
       pagina_url: location.href,
@@ -148,7 +148,7 @@
       initial_referrer: attribution.initial_referrer || document.referrer || '',
       data_hora: new Date().toISOString(),
       dispositivo: matchMedia('(max-width: 767px)').matches ? 'mobile' : 'desktop',
-      servico_interesse: 'bora_online',
+      servico_interesse: 'bora_pocket',
       cta_origem: lastCta
     });
 
@@ -160,7 +160,7 @@
     status.textContent = 'Registrando seus dados…';
 
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'lead_form_attempt', section_origin: 'nuvemshop', service_interest: 'bora_online', cta_id: lastCta, page_path: location.pathname });
+    window.dataLayer.push({ event: 'lead_form_attempt', section_origin: 'nuvemshop', service_interest: 'bora_pocket', cta_id: lastCta, page_path: location.pathname });
 
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 15000);
@@ -170,12 +170,12 @@
       const result = await response.json();
       if (result.ok !== true) throw new Error(result.message || 'Registro não confirmado.');
 
-      window.dataLayer.push({ event: 'lead_form_success', section_origin: 'nuvemshop', service_interest: 'bora_online', page_path: location.pathname });
+      window.dataLayer.push({ event: 'lead_form_success', section_origin: 'nuvemshop', service_interest: 'bora_pocket', page_path: location.pathname });
       status.dataset.state = 'success';
       status.textContent = 'Dados registrados. Vamos continuar pelo WhatsApp.';
       setTimeout(() => location.assign(waUrl(leadMessage(data))), 900);
     } catch {
-      window.dataLayer.push({ event: 'lead_form_error', section_origin: 'nuvemshop', service_interest: 'bora_online', page_path: location.pathname });
+      window.dataLayer.push({ event: 'lead_form_error', section_origin: 'nuvemshop', service_interest: 'bora_pocket', page_path: location.pathname });
       status.dataset.state = 'error';
       status.textContent = 'Não conseguimos confirmar o registro agora. Continue pelo WhatsApp.';
       fallback.href = waUrl(leadMessage(data));

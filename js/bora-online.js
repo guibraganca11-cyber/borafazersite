@@ -1,6 +1,11 @@
 (() => {
   const form = document.querySelector('.online-form');
   if (!form) return;
+  const cfg = {
+    produto: form.dataset.produto || 'Bora Online',
+    origin: form.dataset.origin || 'bora-online',
+    service: form.dataset.service || 'bora_online'
+  };
 
   const query = new URLSearchParams(location.search);
   const campaignKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
@@ -51,7 +56,7 @@
 
   const whatsappUrl = data => {
     const message = [
-      'Olá! Quero entender como o Bora Online pode ajudar minha empresa.',
+      `Olá! Quero entender como o ${cfg.produto} pode ajudar minha empresa.`,
       `Nome: ${data.nome}`,
       `Empresa: ${data.empresa}`,
       `Momento atual: ${data.estagio}`,
@@ -76,9 +81,9 @@
     ].join(' | ');
 
     Object.assign(data, campaign, {
-      produto: 'Bora Online',
-      origem: 'bora-online',
-      pagina: 'bora-online',
+      produto: cfg.produto,
+      origem: cfg.origin,
+      pagina: cfg.origin,
       pagina_url: location.href,
       pagina_origem: entryUrl,
       url_entrada: entryUrl,
@@ -86,7 +91,7 @@
       initial_referrer: document.referrer || '',
       data_hora: new Date().toISOString(),
       dispositivo: matchMedia('(max-width: 767px)').matches ? 'mobile' : 'desktop',
-      servico_interesse: 'bora_online',
+      servico_interesse: cfg.service,
       cta_origem: lastCta
     });
 
@@ -100,8 +105,8 @@
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: 'lead_form_attempt',
-      section_origin: 'bora-online',
-      service_interest: 'bora_online',
+      section_origin: cfg.origin,
+      service_interest: cfg.service,
       cta_id: lastCta,
       page_path: location.pathname
     });
@@ -121,8 +126,8 @@
 
       window.dataLayer.push({
         event: 'lead_form_success',
-        section_origin: 'bora-online',
-        service_interest: 'bora_online',
+        section_origin: cfg.origin,
+        service_interest: cfg.service,
         page_path: location.pathname
       });
       status.dataset.state = 'success';
@@ -131,8 +136,8 @@
     } catch {
       window.dataLayer.push({
         event: 'lead_form_error',
-        section_origin: 'bora-online',
-        service_interest: 'bora_online',
+        section_origin: cfg.origin,
+        service_interest: cfg.service,
         page_path: location.pathname
       });
       status.dataset.state = 'error';

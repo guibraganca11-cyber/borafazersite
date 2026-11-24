@@ -28,3 +28,5 @@ body{color:var(--ink);background:var(--warm)}
 .nav .nav-diag:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange)}
 .nav .nav-diag:hover,.nav .nav-diag[aria-current=page]{background:#fff4f0;color:var(--orange)}
 @media(max-width:720px){.nav .nav-diag{justify-content:center;margin-top:6px}}
+
+.v2-text-link{display:inline-block;margin-top:18px;color:#b7c8d2;text-decoration:underline;text-underline-offset:3px;font-size:.95rem}.v2-text-link:hover{color:#fff}.v2-final-actions{align-items:center}
